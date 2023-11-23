@@ -17,7 +17,7 @@ Hola, este es mi intento de práctica de cadenas y de condiciones.
     let texto1 = "daniel@gmail.com";
     let texto2 = "javi12@hotmail.com.mx";
     let texto3 = "davlev@escueladeciencias.mx"
-    
+    //En esta sección se añade únicamente si el texto incluye el "@"
     if (texto1.includes("@")) {
         console.log("El texto 1 es un correo válido.");
     } else {
@@ -29,15 +29,26 @@ Hola, este es mi intento de práctica de cadenas y de condiciones.
     } else {
         console.log("El texto 2 no es un correo válido");
     } 
-    if (texto1.endsWith(".com",".mx")) {
+    if (texto3.includes("@")) {
+        console.log("El texto 3 es un correo válido.");
+    } else {
+        console.log("El texto 3 no es un correo válido");
+    } 
+    //En esta otra sección se añade la función endsWith para indicar al programa que si el texto termina con ".com" o ".mx" o ".com.mx" entonces diga que el dominio es correcto o no.
+    if (texto1.endsWith(".com")) {
         console.log("El texto 1 tiene el dominio adecuado.");
     } else {
-        console.log("El texto 1 tiene el dominio adecuado, pero no cuenta con .mx.");
+        console.log("El texto 1 no tiene el dominio adecuado.");
     }
-    if (texto2.endsWith(".com.mx")) {
+    if (texto2.endsWith(".com.mx",".mx")) {
         console.log("El texto 2 tiene el dominio adecuado.");
     } else {
-        console.log("El texto 2 tiene el dominio adecuado, pero no cuenta con .mx.");
+        console.log("El texto 2 no tiene el dominio adecuado.");
+    }
+    if (texto3.endsWith(".com",".mx",".com.mx")) {
+        console.log("El texto 3 tiene el dominio adecuado.");
+    } else {
+        console.log("El texto 3 no tiene el dominio adecuado.");
     }
 </script>
 </html>
